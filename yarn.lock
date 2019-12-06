@@ -1471,6 +1471,11 @@ builtin-status-codes@^3.0.0:
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
 
+bulma-carousel@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/bulma-carousel/-/bulma-carousel-4.0.4.tgz#96a2e93e6042d196cb064b9a1ea48ca4db4bb030"
+  integrity sha512-fxARvrPZ0meiVMkxI1ayK2RBd9YUNPc7FFnDpD+SgPnQdZgW+VAvHM8YdR3BJfnmR9lNWNqfKR/hk7Ko0GP2tA==
+
 bulma@^0.8.0:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.8.0.tgz#ac1606431703a4761b18a4a2d5cc1fa864a2aece"
