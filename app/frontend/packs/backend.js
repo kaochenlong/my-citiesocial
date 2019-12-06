@@ -11,5 +11,8 @@ require("@rails/activestorage").start()
 
 import "controllers";
 
+import "scripts/shared";
+import "scripts/backend";
+
 import "styles/shared";
-import "styles/frontend";
+import "styles/backend";
