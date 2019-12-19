@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    <%= render 'shared/flash' if notice %>
     <%= render 'shared/frontend/navbar' %>
     <%= render 'shared/frontend/top_menu' %>
     <%= yield %>
