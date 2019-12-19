@@ -28,10 +28,8 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary">
-            <strong>註冊</strong>
-          </a>
-          <a class="button is-light">登入</a>
+          <%= link_to "註冊", new_user_registration_path, class: 'button is-primary' %>
+          <%= link_to "登入", new_user_session_path, class: 'button is-light' %>
         </div>
       </div>
     </div>
