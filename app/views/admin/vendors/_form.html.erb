@@ -1,0 +1,19 @@
+<%= form_with(model: [:admin, vendor]) do |form| %>
+  <div class="field">
+    <%= form.label :title, '名稱', class: 'label' %>
+    <%= form.text_field :title, class: 'input' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description, '說明', class: 'label' %>
+    <%= form.text_area :description, class: 'textarea' %>
+  </div>
+
+  <div class="field">
+    <%= form.check_box :online %>
+    <%= form.label :online, '正常營運中？', class: 'checkbox' %>
+  </div>
+
+  <%= form.submit class: 'button is-primary is-medium' %>
+<% end %>
+

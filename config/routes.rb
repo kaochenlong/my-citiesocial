@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root 'products#index'  # /admin
     resources :products
+    resources :vendors, expect: [:show]
   end
 end
 

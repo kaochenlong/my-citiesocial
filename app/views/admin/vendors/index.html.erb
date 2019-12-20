@@ -1,0 +1,30 @@
+<h1 class="title">廠商列表</h1>
+
+<%= link_to "新增廠商", new_admin_vendor_path, class: 'button is-primary is-small' %>
+
+<table class="table is-fullwidth">
+  <thead>
+    <tr>
+      <th>名稱</th>
+      <th>說明</th>
+      <th>狀態</th>
+      <th>更新時間</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @vendors.each do |vendor| %>
+    <tr>
+      <td><%= link_to vendor.title, edit_admin_vendor_path(vendor) %></td>
+      <td><%= strip_tags(vendor.description).truncate(100) %></td>
+      <td><%= vendor.online %></td>
+      <td><%= vendor.updated_at %></td>
+      <td>
+        <%= link_to "編輯", edit_admin_vendor_path(vendor), class: 'button is-light is-small' %>
+        <%= link_to "刪除", admin_vendor_path(vendor), method: :delete, data: {confirm: '確認刪除?!'}, class: 'button is-danger is-small' %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
