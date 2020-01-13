@@ -1,3 +1,30 @@
 <h1 class="title">商品列表</h1>
 
 <%= link_to "新增商品", new_admin_product_path, class: 'button' %>
+
+<table class="table is-fullwidth">
+  <thead>
+    <tr>
+      <th>商品名稱</th>
+      <th>廠商</th>
+      <th>價格</th>
+      <th>銷售狀態</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product|  %>
+      <tr>
+        <td><%= link_to "#{product.name} [商品編號：#{product.code}]", edit_admin_product_path(product) %></td>
+        <td><%= product.vendor.title %></td>
+        <td><%= product.list_price %> / <%= product.sell_price %></td>
+        <td><%= product.on_sell %></td>
+        <td>
+          <%= link_to "編輯", edit_admin_product_path(product), class: 'button is-light is-small' %>
+          <%= link_to "刪除", admin_product_path(product), method: 'delete', data: { confirm: '確認刪除?!' }, class: 'button is-danger is-small' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
