@@ -41,6 +41,12 @@
     <%= form.rich_text_area :description %>
   </div>
 
+  <hr>
+  <h3>庫存項目</h3>
+  <%= form.fields_for :skus do |sku_form| %>
+    <%= render 'sku_fields', form: sku_form %>
+  <% end %>
+
   <%= form.submit class: 'button is-primary is-medium' %>
 <% end %>
 
