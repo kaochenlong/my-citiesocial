@@ -1,22 +1,19 @@
-<div class="columns nested-fields">
+<div class="columns nested-fields" data-new-record="<%= form.object.new_record? %>">
   <div class="column is-6">
     <div class="field">
-      <%= form.label :spec, '規格', class: 'label' %>
-      <%= form.text_field :spec, class: 'input' %>
+      <%= form.text_field :spec, placeholder: '規格', class: 'input' %>
     </div>
   </div>
   <div class="column is-2">
     <div class="field">
-      <%= form.label :quantity, '數量', class: 'label' %>
-      <%= form.number_field :quantity, class: 'input' %>
+      <%= form.number_field :quantity, placeholder: '數量', class: 'input' %>
     </div>
   </div>
   <div class="column is-1">
     <div class="field">
-      X
+      <%= link_to "刪除", '#', class: 'button is-danger', data: {action: 'product-form#remove_sku'} %>
     </div>
   </div>
-  <div class="column">
-  </div>
+  <%= form.hidden_field :_destroy %>
 </div>
 
