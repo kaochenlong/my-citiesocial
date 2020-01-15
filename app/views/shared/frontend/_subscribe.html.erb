@@ -1,17 +1,17 @@
-<section class="subscribe section has-background-light is-centered has-text-centered">
+<section class="subscribe section has-background-light is-centered has-text-centered" data-controller="subscribe">
   <h3 class="has-text-centered is-size-4">訂閱電子報</h3>
 
   <div class="container">
     <form action="#">
       <div class="field has-addons">
         <div class="control has-icons-left is-expanded">
-          <input type="email" placeholder="請輸入您的 Email 信箱" name="email" class="input is-rounded">
+          <input type="email" data-target="subscribe.email" placeholder="請輸入您的 Email 信箱" name="email" class="input is-rounded">
           <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
           </span>
         </div>
         <div class="control">
-          <input type="submit" value="訂閱電子報" class="button is-primary is-rounded">
+          <input type="submit" data-action="subscribe#add" value="訂閱電子報" class="button is-primary is-rounded">
         </div>
       </div>
     </form>
