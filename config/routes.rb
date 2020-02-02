@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     root 'products#index'  # /admin
     resources :products, except: [:show]
     resources :vendors, except: [:show]
+    resources :categories, except: [:show]
   end
 
   namespace :api do
