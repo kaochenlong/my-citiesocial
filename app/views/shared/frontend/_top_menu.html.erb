@@ -1,9 +1,8 @@
 <div class="tabs is-centered">
   <ul>
-    <li class="is-active"><a>Pictures</a></li>
-    <li><a>Music</a></li>
-    <li><a>Videos</a></li>
-    <li><a>Documents</a></li>
+    <% categories.each do |category| %>
+      <li><%= link_to category.name, category %></li>
+    <% end %>
   </ul>
 </div>
 
