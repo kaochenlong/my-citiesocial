@@ -20,7 +20,7 @@
       </article>
     </div>
 
-    <div class="column is-5">
+    <div class="column is-5" data-controller="product" data-product-id="<%= @product.code %>">
       <h3 class="has-text-grey-light"><%= @product.vendor.title %></h3>
       <h2 class="title is-4"><%= @product.name %></h2>
       <p class="has-text-primary is-size-4">
@@ -51,9 +51,9 @@
           數量
         </div>
         <div class="column is-9 field is-grouped">
-          <a href="#" class="button is-white is-medium">-</a>
-          <input type="number" name="quantity" class="input is-medium has-text-centered" value="1">
-          <a href="#" class="button is-white is-medium">+</a>
+          <a href="#" class="button is-white is-medium" data-action="product#quantity_minus">-</a>
+          <input type="number" name="quantity" data-target="product.quantity" class="input is-medium has-text-centered" value="1">
+          <a href="#" class="button is-white is-medium" data-action="product#quantity_plus">+</a>
         </div>
       </div>
       <a href="#" class="button is-primary is-medium is-fullwidth">加到購物車</a>
