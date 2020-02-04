@@ -1,0 +1,33 @@
+<% if current_cart.empty? %>
+  目前購物車是空的!
+  <%= link_to "繼續選購", root_path, class: 'button is-medium' %>
+<% else %>
+  <table class="table is-fullwidth">
+    <thead>
+      <tr>
+        <th>品項</th>
+        <th>單價</th>
+        <th>數量</th>
+        <th>小計</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% current_cart.items.each do |item| %>
+        <tr>
+          <td><%= item.product.name %></td>
+          <td><%= item.product.sell_price %></td>
+          <td><%= item.quantity %></td>
+          <td><%= item.total_price %></td>
+        </tr>
+      <% end %>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3">總價</td>
+        <td><%= current_cart.total_price %></td>
+      </tr>
+    </tfoot>
+  </table>
+  <%= link_to "繼續選購", root_path, class: 'button is-medium' %>
+  <%= link_to "結帳", checkout_cart_path, class: 'button is-danger is-medium' %>
+<% end %>
