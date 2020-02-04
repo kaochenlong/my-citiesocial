@@ -37,7 +37,7 @@
             </div>
             <div class="column is-9 field is-grouped">
               <div class="select is-fullwidth is-medium">
-                <select>
+                <select data-target="product.sku">
                   <%= options_for_select(@product.skus.map { |p| [p.spec, p.id] }) %>
                 </select>
               </div>
@@ -56,7 +56,7 @@
           <a href="#" class="button is-white is-medium" data-action="product#quantity_plus">+</a>
         </div>
       </div>
-      <a href="#" class="button is-primary is-medium is-fullwidth">加到購物車</a>
+      <a href="#" class="button is-primary is-medium is-fullwidth" data-target="product.addToCartButton" data-action="product#add_to_cart">加到購物車</a>
     </div>
   </div>
 </section>
