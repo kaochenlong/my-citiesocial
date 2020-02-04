@@ -1,4 +1,38 @@
 <section class="section">
   <h1 class="title">結帳</h1>
   <%= render 'cart' %>
+
+  <hr>
+  <h2 class="title is-5">收件人資訊</h2>
+
+  <%= form_with(model: @order) do |form| %>
+    <div class="columns">
+      <div class="column">
+        <div class="field">
+          <%= form.label :recipient, '收件人', class: 'label' %>
+          <%= form.text_field :recipient, class: 'input is-medium' %>
+        </div>
+      </div>
+      <div class="column">
+        <div class="field">
+          <%= form.label :tel, '電話', class: 'label' %>
+          <%= form.text_field :tel, class: 'input is-medium' %>
+        </div>
+      </div>
+      <div class="column">
+        <div class="field">
+          <%= form.label :address, '地址', class: 'label' %>
+          <%= form.text_field :address, class: 'input is-medium' %>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <%= form.label :note, '備註說明', class: 'label' %>
+      <%= form.text_area :note, class: 'textarea is-medium' %>
+    </div>
+    <div class="field">
+      <%= form.submit '使用 Line Pay 結帳', class: 'button is-primary is-medium', data: { confirm: '確認送出' } %>
+    </div>
+  <% end %>
+
 </section>
