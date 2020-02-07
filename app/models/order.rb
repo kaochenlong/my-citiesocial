@@ -14,6 +14,11 @@ class Order < ApplicationRecord
 
     event :pay do
       transitions from: :pending, to: :paid
+
+      before do |args|
+        self.transaction_id = args[:transaction_id]
+        self.paid_at = Time.now
+      end
     end
 
     event :deliver do
