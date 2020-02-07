@@ -44,9 +44,7 @@
               </a>
               <div class="navbar-dropdown">
                 <%= link_to "個人資料", edit_user_registration_path, class: 'navbar-item' %>
-                <a class="navbar-item">
-                  訂單紀錄
-                </a>
+                <%= link_to "訂單紀錄", orders_path, class: 'navbar-item' %>
                 <hr class="navbar-divider">
                 <%= link_to "登出", destroy_user_session_path, method: :delete, class: 'navbar-item' %>
               </div>
